@@ -25,19 +25,22 @@ docker-image:
 
 .PHONY: serve
 serve: clean
-	$(HUGO) serve \
+	hugo serve \
 		$(HUGO_TEST_OPTS) \
 		$(HUGO_OPTS)
-
-.PHONY: docker-gen
-docker-gen: clean
-	$(DOCKER_HUGO) \
-		make gen
 
 .PHONY: gen
 gen: clean
 	hugo \
 		$(HUGO_OPTS)
+
+.PHONY: docker-serve
+docker-serve: clean
+	$(DOCKER_HUGO) make serve
+
+.PHONY: docker-gen
+docker-gen: clean
+	$(DOCKER_HUGO) make gen
 
 .PHONY: clean
 clean:

@@ -49,3 +49,13 @@ clean:
 		-name '.*' -or \
 		-name 'CNAME' -or \
 		\) -print0 | xargs -0  -I {} rm -rf {}
+
+.PHONY: publish
+publish:
+	cd $(DST) && \
+		git add . && \
+		git commit -m "published from nornir.tech.src $(shell git rev-parse --short HEAD)" && \
+		git push
+	git add nornir-automation.github.io
+	git commit -m "updated submodule nornir-automation.github.io"
+	git push

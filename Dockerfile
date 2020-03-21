@@ -4,7 +4,7 @@ ARG HUGO_VERSION
 
 ENV GO111MODULE=on
 
-RUN apk add gcc musl-dev g++
+RUN apk add gcc musl-dev g++ make
 
 RUN go get github.com/gohugoio/hugo@${HUGO_VERSION} \
 	&& go install --tags extended github.com/gohugoio/hugo

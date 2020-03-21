@@ -33,10 +33,10 @@ jobs:
       - name: Push changes to nornir.tech.src
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN_PUBLISH }}
+          github_token: ${{ secrets.PUBLISH_TOKEN }}
       - name: Push changes to nornir-automaion.github.io
         uses: ad-m/github-push-action@master
         directory: nornir-automaion.github.io
         branch: master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN_PUBLISH }}
+          github_token: ${{ secrets.PUBLISH_TOKEN }}

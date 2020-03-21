@@ -20,7 +20,7 @@ jobs:
           extended: true
       - name: Build
         run: make gen
-      - name: Run pytest
+      - name: Configure git
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "Github Actions"

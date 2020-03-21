@@ -55,7 +55,7 @@ publish:
 	cd $(DST) && \
 		git add . && \
 		git commit -m "published from nornir.tech.src $(shell git rev-parse --short HEAD)" && \
-		git push
+		git push origin HEAD:master
 	git add nornir-automation.github.io
 	git commit -m "updated submodule nornir-automation.github.io"
 	git push

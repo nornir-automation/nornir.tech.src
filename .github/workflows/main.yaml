@@ -39,4 +39,5 @@ jobs:
         with:
           directory: nornir-automation.github.io
           branch: master
+          force: true
           github_token: ${{ secrets.PUBLISH_TOKEN }}

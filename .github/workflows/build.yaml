@@ -44,24 +44,3 @@ jobs:
           force: true
           repository: nornir-automation/nornir-automation.github.io
           github_token: ${{ secrets.PUBLISH_TOKEN }}
-
----
-name: build nornir.tech sources
-on:
-  push: [push, pull_request]
-
-jobs:
-  publish:
-    name: publlish
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: recursive
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.65.3'
-          extended: true
-      - name: Build
-        run: make gen

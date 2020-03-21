@@ -26,7 +26,17 @@ jobs:
           git config --global user.name "Github Actions"
           cd nornir-automation.github.io
           git add .
-          git commit -m "Publishing from ${{ GITHUB_SHA }}"
+          git commit -m "Publishing from $GITHUB_SHA"
           cd ..
           git add nornir-automation.github.io
           git commit -m "updating submodule nornir-automation.github.io"
+      - name: Push changes to nornir.tech.src
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PUBLISH_TOKEN }}
+      - name: Push changes to nornir-automaion.github.io
+        uses: ad-m/github-push-action@master
+        directory: nornir-automaion.github.io
+        branch: master
+        with:
+          github_token: ${{ secrets.PUBLISH_TOKEN }}

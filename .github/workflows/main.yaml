@@ -36,7 +36,7 @@ jobs:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
       - name: Push changes to nornir-automaion.github.io
         uses: ad-m/github-push-action@master
-        directory: nornir-automaion.github.io
-        branch: master
         with:
+          directory: nornir-automaion.github.io
+          branch: master
           github_token: ${{ secrets.PUBLISH_TOKEN }}

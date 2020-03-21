@@ -41,5 +41,5 @@ jobs:
           directory: nornir-automation.github.io
           branch: master
           force: true
-          repository: https://github.com/nornir-automation/nornir-automation.github.io.git
+          repository: nornir-automation/nornir-automation.github.io
           github_token: ${{ secrets.PUBLISH_TOKEN }}

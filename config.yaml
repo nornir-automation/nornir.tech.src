@@ -1,0 +1,83 @@
+---
+baseurl: "/"
+languageCode: "en-us"
+theme: "hello-friend-ng"
+
+params:
+    dateform       : "Jan 2, 2006"
+    dateformShort  : "Jan 2"
+    dateformNum    : "2006-01-02"
+    dateformNumTime: "2006-01-02 15:04 -0700"
+
+    # Set disableReadOtherPosts to true in order to hide the links to other posts.
+    disableReadOtherPosts: false
+
+    # Metadata mostly used in document's head
+    description: "Everything related to nornir"
+    keywords: "homepage, blog"
+    images: [""]
+
+    # Directory name of your blog content (default is `content/posts`)
+    contentTypeName: "posts"
+
+    # Default theme "light" or "dark"
+    defaultTheme: "dark"
+
+    social:
+      - name: "twitter"
+        url: "https://twitter.com/dbarrosop"
+      - name: "github"
+        url: "https://github.com/dbarrosop"
+      - name: "linkedin"
+        url: "https://linkedin.com/dbarrosop"
+      - name: "email"
+        url: "mailto:dbarrosop@dravetech.com"
+
+    customCSS:
+      - /css/callout.css
+
+languages:
+    en:
+        title: "nornir.tech"
+        subtitle: "News and information about nornir's projects"
+        keywords: "nornir automation networking programming python golang"
+        copyright: "Nornir"
+        readOtherPosts: "Read other posts"
+
+        params:
+            logo:
+                logoText: "nornir.tech"
+                logoHomeLink: "/"
+                # or
+                #
+                # path: "/img/your-example-logo.svg"
+                # alt: "Your example logo alt text"
+                #
+menu:
+    main:
+      - identifier: "projects"
+        name      : "projects"
+        url       : "/projects/"
+        weight    : "1"
+      - identifier: "posts"
+        name      : "news"
+        url       : "/posts/"
+        weight    : "2"
+      - identifier: "support"
+        name      : "support"
+        url       : "/support/"
+        weight    : "3"
+      - identifier: "sponsors"
+        name      : "sponsors"
+        url       : "/sponsors/"
+        weight    : "5"
+      - identifier: "tags"
+        name      : "tags"
+        url       : "/tags/"
+        weight    : "7"
+
+taxonomies:
+    tag: tags
+
+permalinks:
+    posts: /:year/:month/:day/:title/

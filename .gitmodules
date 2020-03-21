@@ -1,0 +1,3 @@
+[submodule "nornir-automation.github.io"]
+	path = nornir-automation.github.io
+	url = git@github.com:nornir-automation/nornir-automation.github.io.git

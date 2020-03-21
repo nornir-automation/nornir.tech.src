@@ -1,0 +1,24 @@
+---
+name: test nornir
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    name: publlish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout submodules
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git submodule update --init --recursive
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.65.3'
+          extended: true
+      - name: Build
+        run: make gen

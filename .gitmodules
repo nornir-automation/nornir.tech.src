@@ -1,3 +1,6 @@
 [submodule "nornir-automation.github.io"]
 	path = nornir-automation.github.io
 	url = git@github.com:nornir-automation/nornir-automation.github.io.git
+[submodule "themes/hugo-theme-hello-friend-ng"]
+	path = themes/hugo-theme-hello-friend-ng
+	url = https://github.com/rhazdon/hugo-theme-hello-friend-ng.git

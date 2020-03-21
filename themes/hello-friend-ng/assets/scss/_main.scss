@@ -111,6 +111,14 @@ figure {
     margin-right: auto;
   }
 
+  &.left-floated {
+    margin-right: auto;
+    float: left;
+    img {
+      margin: 20px 20px 20px 0;
+    }
+  }
+
   &.center {
     margin-left: auto;
     margin-right: auto;
@@ -118,6 +126,20 @@ figure {
 
   &.right {
     margin-left: auto;
+  }
+
+  &.right-floated {
+    margin-left: auto;
+    float: right;
+    img {
+      margin: 20px 0 20px 20px;
+    }
+  }
+
+  &.rounded {
+    img {
+      border-radius: 50%;
+    }
   }
 
   figcaption {
@@ -235,7 +257,7 @@ ol ol {
   flex: 1 auto;
   align-items: center;
   justify-content: center;
-  margin: 10px 0;
+  margin: 0;
 
   @media #{$media-size-phone} {
     margin-top: 0;
@@ -295,11 +317,11 @@ hr {
 	font-size: 0.875rem;
 	font-weight: bold;
 	height: auto;
+    width: auto;
+    top: 5px;
 	left: 5px;
 	line-height: normal;
 	padding: 15px 23px 14px;
 	text-decoration: none;
-	top: 5px;
-	width: auto;
 	z-index: 100000;
 }

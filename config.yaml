@@ -35,6 +35,7 @@ params:
 
     customCSS:
       - /css/callout.css
+      - /css/menu.css
 
 languages:
     en:
@@ -57,9 +58,23 @@ menu:
     main:
       - identifier: "projects"
         name      : "projects"
-        url       : "/projects/"
         weight    : "1"
-      - identifier: "posts"
+      - identifier: "gornir"
+        name      : "gornir"
+        url       : "/gornir/"
+        parent    : "projects"
+        weight    : "20"
+      - identifier: "nornir"
+        name      : "nornir"
+        url       : "/nornir/"
+        parent    : "projects"
+        weight    : "10"
+      - identifier: "third_party"
+        name      : "third party"
+        url       : "/tags/external-projects/"
+        parent    : "projects"
+        weight    : "30"
+      - identifier: "news"
         name      : "news"
         url       : "/posts/"
         weight    : "2"

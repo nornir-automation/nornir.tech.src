@@ -1,0 +1,33 @@
+---
+connections:
+    - url: https://github.com/nornir-automation/napalm_nornir
+      name: napalm
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      description: |
+          Allows connecting to devices using the [napalm](https://github.com/napalm-automation/napalm/) library
+    - url: TBD
+      name: netmiko
+      maintainer: "[ktbyers](https://github.com/ktbyers)"
+      description: |
+          Allows connecting to devices using the [netmiko](https://github.com/ktbyers/netmiko) library
+
+
+tasks:
+    - url: https://github.com/nornir-automation/napalm_nornir
+      name: napalm
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      description: |
+          Collection of tasks that exposes [napalm](https://github.com/napalm-automation/napalm/)'s functionality to manipulate
+          the configuration of devices and gather information
+    - url: TBD
+      name: netmiko
+      maintainer: "[ktbyers](https://github.com/ktbyers)"
+      description: |
+          Tasks that exposes [netmiko](https://github.com/ktbyers/netmiko)'s functionality
+
+inventories:
+    - url: TBD
+      name: netbox
+      maintainer: TBD
+      description: |
+          Magic with netbox

@@ -1,0 +1,64 @@
+{{ define "main" }}
+    <main class="post">
+
+        <article>
+            <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </article>
+
+        <h3>Connections</h3>
+        <table>
+          <tr>
+            <th>name</th>
+            <th>maintainer</th>
+            <th>description</th>
+          </tr>
+          {{ range .Site.Data.nornir.plugins.connections }}
+          <tr>
+            <td><a href="{{ .url }}">{{ .name }}</a></td>
+            <td>{{ .maintainer|markdownify }}</td>
+            <td>{{ .description|markdownify }}</td>
+          </tr>
+          {{ end }}
+        </table>
+
+        <h3>Tasks</h3>
+        <table>
+          <tr>
+            <th>name</th>
+            <th>maintainer</th>
+            <th>description</th>
+          </tr>
+          {{ range .Site.Data.nornir.plugins.tasks }}
+          <tr>
+            <td><a href="{{ .url }}">{{ .name }}</a></td>
+            <td>{{ .maintainer|markdownify }}</td>
+            <td>{{ .description|markdownify }}</td>
+          </tr>
+          {{ end }}
+        </table>
+
+        <h3>Inventory</h3>
+        <table>
+          <tr>
+            <th>name</th>
+            <th>maintainer</th>
+            <th>description</th>
+          </tr>
+          {{ range .Site.Data.nornir.plugins.inventories }}
+          <tr>
+            <td><a href="{{ .url }}">{{ .name }}</a></td>
+            <td>{{ .maintainer|markdownify }}</td>
+            <td>{{ .description|markdownify }}</td>
+          </tr>
+          {{ end }}
+        </table>
+
+
+
+      </div>
+    </main>
+{{ end }}

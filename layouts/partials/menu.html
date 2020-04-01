@@ -1,0 +1,24 @@
+<nav class="menu">
+    <ul class="menu__inner">
+        {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+          {{ if .Children }}
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">{{ .Name }}
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                {{ range .Children }}
+                <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                {{ end }}
+              </div>
+            </div>
+          </li>
+          {{ else }}
+            <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        {{- end }}
+    </ul>
+
+</nav>

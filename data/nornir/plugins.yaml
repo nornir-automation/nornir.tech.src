@@ -26,6 +26,11 @@ tasks:
           Tasks that exposes [netmiko](https://github.com/ktbyers/netmiko)'s functionality
 
 inventories:
+    - url: https://github.com/carlmontanari/nornir_ansible
+      name: ansible
+      maintainer: "[carlmontanari](https://github.com/carlmontanari)"
+      description: |
+          Inventory plugin to use Ansible inventories with nornir
     - url: TBD
       name: netbox
       maintainer: TBD

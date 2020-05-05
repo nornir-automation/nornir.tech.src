@@ -31,3 +31,8 @@ inventories:
       maintainer: "[wvandeun](https://github.com/wvandeun), [clay584](https://github.com/clay584)"
       description: |
           Nornir inventory plugin for [NetBox](https://github.com/netbox-community/netbox)
+    - url: https://github.com/carlmontanari/nornir_ansible
+      name: ansible
+      maintainer: "[carlmontanari](https://github.com/carlmontanari)"
+      description: |
+          Inventory plugin to use Ansible inventories with nornir

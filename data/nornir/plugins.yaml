@@ -26,8 +26,8 @@ tasks:
           Tasks that exposes [netmiko](https://github.com/ktbyers/netmiko)'s functionality
 
 inventories:
-    - url: TBD
-      name: netbox
-      maintainer: TBD
+    - url: https://github.com/wvandeun/nornir_netbox
+      name: NetBox
+      maintainer: "[wvandeun](https://github.com/wvandeun), [clay584](https://github.com/clay584)"
       description: |
-          Magic with netbox
+          Nornir inventory plugin for [NetBox](https://github.com/netbox-community/netbox)

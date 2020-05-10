@@ -174,7 +174,7 @@ def clean_ospf(task):
     desired_ospf(task)
 ```
 
-Now we have the ability to remove all current OSPF configuration, we create a custom function called ```desired_ospf```. This is almost identical to the earlier script and simply builds our configuration from host\_vars definition files and pushes them through our jinja2 OSPF template and out to the devices:
+Now we have the ability to remove all current OSPF configuration, we create a custom function called ```desired_ospf```. This is almost identical to the earlier script and simply builds our configuration from ```host_vars``` definition files and pushes them through our jinja2 OSPF template and out to the devices:
 
 
 

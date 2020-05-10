@@ -125,11 +125,11 @@ print_result(results)
 
 This is a fairly typical script which will pull information from the desired state specified in our ```host_vars``` yaml files, save the information and use those values to build our configurations based on the syntax specified in our Jinja2 template. Nornir then invokes Netmiko to push those configurations out to all of our respective devices in the network. Now that we understand what&#39;s going on, let&#39;s execute that script and push our desired state onto our otherwise blank network:
 
-![](6.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/6.png?raw=true)
 
 With our desired state now present on the network, let&#39;s immediately use pyATS to build a detailed profile of that configuration and grab our &quot;golden&quot; snapshot. Let&#39;s execute the ```capture-golden``` script:
 
-![](7.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/7.png?raw=true)
 
 pyATS has successfully profiled our desired state and you will notice the addition of a new directory called ```desired-ospf``` which houses of all of our detailed OSPF information for each device. 
 Now that we have pushed our desired state and successfully created a snapshot for future comparison, let&#39;s look at the main script which we will use for our OSPF management going forward, ```Pynir.py```. The script is relatively long so let&#39;s break it down into sections. First we begin with our imports - and I have also included a Pyfiglet banner for purely aesthetic purposes (who doesn&#39;t like to make their scripts pretty, right?).
@@ -245,39 +245,39 @@ else:
 
 Now that we understand the logic of the script, let&#39;s perform a demo and see the workflow in action. Now remember, we have already deployed our initial desired state and captured that snapshot using both the ```nornir-ospf.py``` and ```capture-golden``` scripts. Let&#39;s first &quot;break&quot; the network by adding some unwanted OSPF configurations on R8:
 
-![](14.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/14.png?raw=true)
 
 Now the current state of our OSPF network does not match the configuration specified in our desired state. Let&#39;s run the ```Pynir.py``` script and see if it detects the change. ```Pynir.py``` first starts learning the current OSPF configurations:
 
-![](15.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/15.png?raw=true)
 
 The change is detected and we are both notified and given the option to rollback. This time, we first want to inspect the changes, so let&#39;s answer &quot;n&quot; for No:
 
-![](16.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/16.png?raw=true)
 
 The script terminates and leaves the relevant artefacts which we are free to inspect (notice the new directories ```ospf-current``` and ```ospfdiff```):
 
-![](17.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/17.png?raw=true)
 
 We can now freely examine these changes and decide if we want to erase them by performing a rollback, or leave them and updating our OSPF definitions:
 
-![](18.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/18.png?raw=true)
 
 Upon examination it is clear now that these configuration are certainly not meant to be present in the network. We then rerun Pynir, this time choosing &quot;y&quot; to rollback to our desired state:
 
-![](19.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/19.png?raw=true)
 
 This selection triggers Nornir to execute our custom functions that remove all current OSPF configs and artefacts before redeploying OSPF as specified in our ```host_vars``` definition files.
 
 First the OSPF configurations are identified by the show output, and then negated:
 
-![](20.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/20.png?raw=true)
 
-Pynir then pulls out desired state from our host varables, builds our configuration using the Jinja2 template, and pushes out the config: ![](21.png)
+Pynir then pulls out desired state from our host varables, builds our configuration using the Jinja2 template, and pushes out the config: ![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/21.png?raw=true)
 
 For our final validation, let&#39;s rerun the script and ensure that we are now in compliance with our desired state:
 
-![](22.png)
+![alt text](https://github.com/IPvZero/Nornir-Blog/blob/master/images/22.png?raw=true)
 
 Excellent! Everything is back to the way it should be.
 

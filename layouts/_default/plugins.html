@@ -9,50 +9,19 @@
             </div>
         </article>
 
-        <h3>Connections</h3>
         <table>
           <tr>
             <th>name</th>
-            <th>maintainer</th>
+            <th>maintainers</th>
             <th>description</th>
+            <th>plugin types</th>
           </tr>
-          {{ range .Site.Data.nornir.plugins.connections }}
+          {{ range .Site.Data.nornir.plugins.repositories }}
           <tr>
             <td><a href="{{ .url }}">{{ .name }}</a></td>
             <td>{{ .maintainer|markdownify }}</td>
             <td>{{ .description|markdownify }}</td>
-          </tr>
-          {{ end }}
-        </table>
-
-        <h3>Tasks</h3>
-        <table>
-          <tr>
-            <th>name</th>
-            <th>maintainer</th>
-            <th>description</th>
-          </tr>
-          {{ range .Site.Data.nornir.plugins.tasks }}
-          <tr>
-            <td><a href="{{ .url }}">{{ .name }}</a></td>
-            <td>{{ .maintainer|markdownify }}</td>
-            <td>{{ .description|markdownify }}</td>
-          </tr>
-          {{ end }}
-        </table>
-
-        <h3>Inventory</h3>
-        <table>
-          <tr>
-            <th>name</th>
-            <th>maintainer</th>
-            <th>description</th>
-          </tr>
-          {{ range .Site.Data.nornir.plugins.inventories }}
-          <tr>
-            <td><a href="{{ .url }}">{{ .name }}</a></td>
-            <td>{{ .maintainer|markdownify }}</td>
-            <td>{{ .description|markdownify }}</td>
+            <td>{{ range .plugin_types}} {{ . }} {{ end }}</td>
           </tr>
           {{ end }}
         </table>

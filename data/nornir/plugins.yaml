@@ -1,38 +1,56 @@
 ---
-connections:
-    - url: https://github.com/nornir-automation/napalm_nornir
-      name: napalm
+repositories:
+
+    - url: https://github.com/nornir-automation/nornir_napalm
+      name: nornir_napalm
       maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      plugin_types:
+      - tasks
+      - connection
       description: |
-          Allows connecting to devices using the [napalm](https://github.com/napalm-automation/napalm/) library
-    - url: TBD
-      name: netmiko
-      maintainer: "[ktbyers](https://github.com/ktbyers)"
-      description: |
-          Allows connecting to devices using the [netmiko](https://github.com/ktbyers/netmiko) library
+          Allows interacting with devices using the [napalm](https://github.com/napalm-automation/napalm/) library
 
-
-tasks:
     - url: https://github.com/nornir-automation/napalm_nornir
-      name: napalm
-      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
-      description: |
-          Collection of tasks that exposes [napalm](https://github.com/napalm-automation/napalm/)'s functionality to manipulate
-          the configuration of devices and gather information
-    - url: TBD
-      name: netmiko
+      name: nornir_netmiko
       maintainer: "[ktbyers](https://github.com/ktbyers)"
+      plugin_types:
+      - tasks
+      - connection
       description: |
-          Tasks that exposes [netmiko](https://github.com/ktbyers/netmiko)'s functionality
+          Allows interacting with devices using the [netmiko](https://github.com/ktbyers/netmiko) library
 
-inventories:
     - url: https://github.com/wvandeun/nornir_netbox
-      name: NetBox
+      name: nornir_netbox
       maintainer: "[wvandeun](https://github.com/wvandeun), [clay584](https://github.com/clay584)"
+      plugin_types:
+      - inventory
       description: |
           Nornir inventory plugin for [NetBox](https://github.com/netbox-community/netbox)
+
     - url: https://github.com/carlmontanari/nornir_ansible
-      name: ansible
+      name: nornir_ansible
       maintainer: "[carlmontanari](https://github.com/carlmontanari)"
+      plugin_types:
+      - inventory
       description: |
           Inventory plugin to use Ansible inventories with nornir
+
+    - url: https://github.com/nornir-automation/nornir_utils
+      name: nornir_utils
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      plugin_types:
+      - tasks
+      - processors
+      - inventory
+      - functions
+      description: |
+          Collection of simple plugins for nornir; `YAMLInventory`, `print_result`, `print_title`, `echo_data`, `write_file`, `load_json`, `load_yaml`,
+          amongst others.
+
+    - url: https://github.com/nornir-automation/nornir_jinja2
+      name: nornir_jinja2
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      plugin_types:
+      - tasks
+      description: |
+          Collection of tasks to work with jinja2 templates

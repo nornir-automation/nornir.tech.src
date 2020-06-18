@@ -1,6 +1,6 @@
 ---
 title: "Nornir 3 beta"
-date: "2020-05-18"
+date: "2020-06-18"
 tags: ["nornir"]
 ---
 

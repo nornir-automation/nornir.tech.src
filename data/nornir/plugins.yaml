@@ -10,7 +10,7 @@ repositories:
       description: |
           Allows interacting with devices using the [napalm](https://github.com/napalm-automation/napalm/) library
 
-    - url: https://github.com/nornir-automation/napalm_nornir
+    - url: https://github.com/ktbyers/nornir_netmiko
       name: nornir_netmiko
       maintainer: "[ktbyers](https://github.com/ktbyers)"
       plugin_types:

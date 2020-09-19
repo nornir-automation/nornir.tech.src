@@ -35,6 +35,15 @@ repositories:
       description: |
           Inventory plugin to use Ansible inventories with nornir
 
+    - url: https://github.com/scrapli/nornir_scrapli
+      name: nornir_scrapli
+      maintainer: "[carlmontanari](https://github.com/carlmontanari)"
+      plugin_types:
+      - tasks
+      - connection
+      description: |
+          Allows interacting with devices using the [scrapli](https://github.com/carlmontanari/scrapli) library
+
     - url: https://github.com/nornir-automation/nornir_utils
       name: nornir_utils
       maintainer: "[dbarrosop](https://github.com/dbarrosop)"

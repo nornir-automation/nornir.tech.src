@@ -63,3 +63,11 @@ repositories:
       - tasks
       description: |
           Collection of tasks to work with jinja2 templates
+          
+    - url: https://github.com/routetonull/nornir_ipfabric
+      name: nornir_ipfabric
+      maintainer: "[routetonull](https://github.com/routetonull)"
+      plugin_types:
+      - inventory
+      description: |
+           Nornir inventory plugin for [IP Fabric](https://ipfabric.io/)

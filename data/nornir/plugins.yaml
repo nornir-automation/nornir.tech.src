@@ -63,7 +63,7 @@ repositories:
       - tasks
       description: |
           Collection of tasks to work with jinja2 templates
-          
+
     - url: https://github.com/routetonull/nornir_ipfabric
       name: nornir_ipfabric
       maintainer: "[routetonull](https://github.com/routetonull)"
@@ -71,3 +71,13 @@ repositories:
       - inventory
       description: |
            Nornir inventory plugin for [IP Fabric](https://ipfabric.io/)
+
+    - url: https://github.com/dmulyalin/nornir-salt
+      name: nornir_salt
+      maintainer: "[dmulyalin](https://github.com/dmulyalin)"
+      plugin_types:
+      - runners
+      - inventory
+      - functions
+      description: |
+           Collection of Nornir plugins: `QueueRunner`, `RetryRunner`, `DictInventory`, `ResultSerializer`, `FFun`

@@ -81,3 +81,12 @@ repositories:
       - functions
       description: |
            Collection of Nornir plugins: `QueueRunner`, `RetryRunner`, `DictInventory`, `ResultSerializer`, `FFun`
+
+    - url: https://github.com/DataKnox/nornir_pyez
+      name: nornir_pyez
+      maintainer: "[DataKnox](https://github.com/DataKnox)"
+      plugin_types:
+      - tasks
+      - connection
+      description: |
+          Allows interacting with Juniper devices using the [PyEZ](https://github.com/Juniper/py-junos-eznc) library

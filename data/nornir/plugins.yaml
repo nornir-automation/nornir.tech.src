@@ -90,3 +90,14 @@ repositories:
       - connection
       description: |
           Allows interacting with Juniper devices using the [PyEZ](https://github.com/Juniper/py-junos-eznc) library
+
+    - url: https://github.com/erjac77/nornir_f5
+      name: nornir_f5
+      maintainer: "[erjac77](https://github.com/erjac77)"
+      plugin_types:
+      - tasks
+      - connection
+      description: |
+          Collection of Nornir plugins to interact with F5 systems and deploy declaratives
+          to F5 Automation Toolchain (ATC) services like AS3, DO, and TS.
+

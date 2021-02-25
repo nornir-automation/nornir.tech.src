@@ -1,111 +1,112 @@
 ---
 repositories:
-  - url: https://github.com/nornir-automation/nornir_napalm
-    name: nornir_napalm
-    maintainer: "[dbarrosop](https://github.com/dbarrosop)"
-    plugin_types:
+
+    - url: https://github.com/nornir-automation/nornir_napalm
+      name: nornir_napalm
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      plugin_types:
       - tasks
       - connection
-    description: |
-      Allows interacting with devices using the [napalm](https://github.com/napalm-automation/napalm/) library
+      description: |
+          Allows interacting with devices using the [napalm](https://github.com/napalm-automation/napalm/) library
 
-  - url: https://github.com/ktbyers/nornir_netmiko
-    name: nornir_netmiko
-    maintainer: "[ktbyers](https://github.com/ktbyers)"
-    plugin_types:
+    - url: https://github.com/ktbyers/nornir_netmiko
+      name: nornir_netmiko
+      maintainer: "[ktbyers](https://github.com/ktbyers)"
+      plugin_types:
       - tasks
       - connection
-    description: |
-      Allows interacting with devices using the [netmiko](https://github.com/ktbyers/netmiko) library
+      description: |
+          Allows interacting with devices using the [netmiko](https://github.com/ktbyers/netmiko) library
 
-  - url: https://github.com/wvandeun/nornir_netbox
-    name: nornir_netbox
-    maintainer: "[wvandeun](https://github.com/wvandeun), [clay584](https://github.com/clay584)"
-    plugin_types:
+    - url: https://github.com/wvandeun/nornir_netbox
+      name: nornir_netbox
+      maintainer: "[wvandeun](https://github.com/wvandeun), [clay584](https://github.com/clay584)"
+      plugin_types:
       - inventory
-    description: |
-      Nornir inventory plugin for [NetBox](https://github.com/netbox-community/netbox)
+      description: |
+          Nornir inventory plugin for [NetBox](https://github.com/netbox-community/netbox)
 
-  - url: https://github.com/carlmontanari/nornir_ansible
-    name: nornir_ansible
-    maintainer: "[carlmontanari](https://github.com/carlmontanari)"
-    plugin_types:
+    - url: https://github.com/carlmontanari/nornir_ansible
+      name: nornir_ansible
+      maintainer: "[carlmontanari](https://github.com/carlmontanari)"
+      plugin_types:
       - inventory
-    description: |
-      Inventory plugin to use Ansible inventories with nornir
+      description: |
+          Inventory plugin to use Ansible inventories with nornir
 
-  - url: https://github.com/scrapli/nornir_scrapli
-    name: nornir_scrapli
-    maintainer: "[carlmontanari](https://github.com/carlmontanari)"
-    plugin_types:
+    - url: https://github.com/scrapli/nornir_scrapli
+      name: nornir_scrapli
+      maintainer: "[carlmontanari](https://github.com/carlmontanari)"
+      plugin_types:
       - tasks
       - connection
-    description: |
-      Allows interacting with devices using the [scrapli](https://github.com/carlmontanari/scrapli) library
+      description: |
+          Allows interacting with devices using the [scrapli](https://github.com/carlmontanari/scrapli) library
 
-  - url: https://github.com/nornir-automation/nornir_utils
-    name: nornir_utils
-    maintainer: "[dbarrosop](https://github.com/dbarrosop)"
-    plugin_types:
+    - url: https://github.com/nornir-automation/nornir_utils
+      name: nornir_utils
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      plugin_types:
       - tasks
       - processors
       - inventory
       - functions
-    description: |
-      Collection of simple plugins for nornir; `YAMLInventory`, `print_result`, `print_title`, `echo_data`, `write_file`, `load_json`, `load_yaml`,
-      amongst others.
+      description: |
+          Collection of simple plugins for nornir; `YAMLInventory`, `print_result`, `print_title`, `echo_data`, `write_file`, `load_json`, `load_yaml`,
+          amongst others.
 
-  - url: https://github.com/nornir-automation/nornir_jinja2
-    name: nornir_jinja2
-    maintainer: "[dbarrosop](https://github.com/dbarrosop)"
-    plugin_types:
+    - url: https://github.com/nornir-automation/nornir_jinja2
+      name: nornir_jinja2
+      maintainer: "[dbarrosop](https://github.com/dbarrosop)"
+      plugin_types:
       - tasks
-    description: |
-      Collection of tasks to work with jinja2 templates
+      description: |
+          Collection of tasks to work with jinja2 templates
 
-  - url: https://github.com/routetonull/nornir_ipfabric
-    name: nornir_ipfabric
-    maintainer: "[routetonull](https://github.com/routetonull)"
-    plugin_types:
+    - url: https://github.com/routetonull/nornir_ipfabric
+      name: nornir_ipfabric
+      maintainer: "[routetonull](https://github.com/routetonull)"
+      plugin_types:
       - inventory
-    description: |
-      Nornir inventory plugin for [IP Fabric](https://ipfabric.io/)
+      description: |
+           Nornir inventory plugin for [IP Fabric](https://ipfabric.io/)
 
-  - url: https://github.com/dmulyalin/nornir-salt
-    name: nornir_salt
-    maintainer: "[dmulyalin](https://github.com/dmulyalin)"
-    plugin_types:
+    - url: https://github.com/dmulyalin/nornir-salt
+      name: nornir_salt
+      maintainer: "[dmulyalin](https://github.com/dmulyalin)"
+      plugin_types:
       - runners
       - inventory
       - functions
-    description: |
-      Collection of Nornir plugins: `QueueRunner`, `RetryRunner`, `DictInventory`, `ResultSerializer`, `FFun`
+      description: |
+           Collection of Nornir plugins: `QueueRunner`, `RetryRunner`, `DictInventory`, `ResultSerializer`, `FFun`
 
-  - url: https://github.com/DataKnox/nornir_pyez
-    name: nornir_pyez
-    maintainer: "[DataKnox](https://github.com/DataKnox)"
-    plugin_types:
+    - url: https://github.com/DataKnox/nornir_pyez
+      name: nornir_pyez
+      maintainer: "[DataKnox](https://github.com/DataKnox)"
+      plugin_types:
       - tasks
       - connection
-    description: |
-      Allows interacting with Juniper devices using the [PyEZ](https://github.com/Juniper/py-junos-eznc) library
+      description: |
+          Allows interacting with Juniper devices using the [PyEZ](https://github.com/Juniper/py-junos-eznc) library
 
-  - url: https://github.com/erjac77/nornir_f5
-    name: nornir_f5
-    maintainer: "[erjac77](https://github.com/erjac77)"
-    plugin_types:
+    - url: https://github.com/erjac77/nornir_f5
+      name: nornir_f5
+      maintainer: "[erjac77](https://github.com/erjac77)"
+      plugin_types:
       - tasks
       - connection
-    description: |
-      Collection of Nornir plugins to interact with F5 systems and deploy declaratives
-      to F5 Automation Toolchain (ATC) services like AS3, DO, and TS.
+      description: |
+          Collection of Nornir plugins to interact with F5 systems and deploy declaratives
+          to F5 Automation Toolchain (ATC) services like AS3, DO, and TS.
 
-  - url: https://github.com/nautobot/nornir-nautobot
-    name: nornir-nautobot
-    maintainer: "[Network to Code](https://github.com/networktocode)"
-    plugin_types:
-      - inventory
-      - processors
-      - tasks
-    description: |
-      Collection of Nornir plugins with interactions to [Nautobot](https://github.com/nautobot/nautobot). Including `inventory`, `processor`, and `tasks`.
+    - url: https://github.com/nautobot/nornir-nautobot
+      name: nornir-nautobot
+      maintainer: "[Network to Code](https://github.com/networktocode)"
+      plugin_types:
+        - inventory
+        - processors
+        - tasks
+      description: |
+        Collection of Nornir plugins with interactions to [Nautobot](https://github.com/nautobot/nautobot). Including `inventory`, `processor`, and `tasks`.

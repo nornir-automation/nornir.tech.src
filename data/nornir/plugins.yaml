@@ -101,3 +101,12 @@ repositories:
           Collection of Nornir plugins to interact with F5 systems and deploy declaratives
           to F5 Automation Toolchain (ATC) services like AS3, DO, and TS.
 
+    - url: https://github.com/nautobot/nornir-nautobot
+      name: nornir-nautobot
+      maintainer: "[Network to Code](https://github.com/networktocode)"
+      plugin_types:
+        - inventory
+        - processors
+        - tasks
+      description: |
+        Collection of Nornir plugins with interactions to [Nautobot](https://github.com/nautobot/nautobot). Including `inventory`, `processor`, and `tasks`.

@@ -4,6 +4,9 @@ date: "2021-04-19"
 tags: ["nornir", "filtering", "guest"]
 ---
 
+_This is a guest post by Daniel Teycheney, for more content like this and other interesting stuff you can visit the following [youtube channel](https://www.youtube.com/channel/UCTjhvZ6rj2Hya4nszBfXoRg), [github account](https://github.com/writememe), [blog](https://blog.danielteycheney.com/) and [twitter feed](https://twitter.com/danielteycheney)._
+
+---
 
 nornir is a first-class automation framework, so if you are reading this page, you're probably here to learn more. One of the aspects of which sets nornir apart is filtering.  
 

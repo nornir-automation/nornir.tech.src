@@ -110,3 +110,11 @@ repositories:
         - tasks
       description: |
         Collection of Nornir plugins with interactions to [Nautobot](https://github.com/nautobot/nautobot). Including `inventory`, `processor`, and `tasks`.
+
+    - url: https://github.com/timeforplanb123/nornir_cli
+      name: nornir-cli
+      maintainer: "[timeforplanb123](https://github.com/timeforplanb123)"
+      plugin_types:
+        - cli
+      description: |
+           CLI tool based on Nornir, Nornir Plugins and [Click](https://github.com/pallets/click)  

@@ -11,7 +11,7 @@ layout: "section_no_title"
 You can find community-driven support via the following channels:
 
 1. On [network to code](https://networktocode.herokuapp.com/)'s slack, `#nornir` channel
-2. On [discourse](https://nornir.discourse.group/)
+2. On [github discussions](https://github.com/nornir-automation/nornir/discussions)
 
 ---
 

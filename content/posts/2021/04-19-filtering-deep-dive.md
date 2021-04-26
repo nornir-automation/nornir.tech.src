@@ -24,7 +24,7 @@ Some of the topics covered are:
 A sample inventory is weaved throughout the how-to guide, so that the concepts being portrayed are contextually revelant to a real world use case. Below is the
 link to the how-to guide:   
 
-[nornir official documentation - filtering deep dive](https://nornir.readthedocs.io/en/latest/howto/filtering_deep_dive.html)
+[nornir official documentation - filtering deep dive](https://nornir.readthedocs.io/en/develop/howto/filtering_deep_dive.html)
 
 ## Further resources
 

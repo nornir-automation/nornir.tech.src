@@ -118,3 +118,21 @@ repositories:
         - cli
       description: |
            CLI tool based on Nornir, Nornir Plugins and [Click](https://github.com/pallets/click)  
+
+    - url: https://github.com/devon-mar/nornir_routeros
+      name: nornir_routeros
+      maintainer: "[devon-mar](https://github.com/devon-mar)"
+      plugin_types:
+        - tasks
+        - connection
+      description: |
+        RouterOS API connection plugin and tasks for nornir.
+
+    - url: https://github.com/devon-mar/nornir_paramiko
+      name: nornir_paramiko
+      maintainer: "[devon-mar](https://github.com/devon-mar)"
+      plugin_types:
+        - tasks
+        - connection
+      description: |
+        Paramiko connection plugin and tasks adapted from nornir 2.5.0.

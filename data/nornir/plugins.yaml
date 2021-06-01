@@ -136,3 +136,11 @@ repositories:
         - connection
       description: |
         Paramiko connection plugin and tasks adapted from nornir 2.5.0.
+
+    - url: https://github.com/InfrastructureAsCode-ch/nornir_http
+      name: nornir_http
+      maintainer: "[ubaumann](https://github.com/ubaumann)"
+      plugin_types:
+        - tasks
+      description: |
+            Collection of tasks to interact with HTTP Servers

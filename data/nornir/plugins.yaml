@@ -144,3 +144,11 @@ repositories:
         - tasks
       description: |
             Collection of tasks to interact with HTTP Servers
+
+    - url: https://github.com/jiujing/nornir_table_inventory
+      name: nornir_table_inventory
+      maintainer: "[jiujing](https://github.com/jiujing)"
+      plugin_types:
+        - inventory
+      description: |
+          Allows  managing inventory by table file(CSV or Excel)

@@ -152,3 +152,11 @@ repositories:
         - inventory
       description: |
           Allows  managing inventory by table file(CSV or Excel)
+
+    - url: https://github.com/h4ndzdatm0ld/nornir_pyxl
+      name: nornir_pyxl
+      maintainer: "[h4ndzdatm0ld](https://github.com/h4ndzdatm0ld)"
+      plugin_types:
+        - tasks
+      description: |
+          Collection of tasks to easily import Excel data into Nornir workflows using OpenPyxl

@@ -1,18 +1,28 @@
+---
+title: "SALTSTACK Nornir Proxy Minion introduction"
+date: "2021-07-16"
+tags: ["nornir", "SALTSTACK", "SALT", "guest"]
+---
+
+_This is a guest post by Denis Mulyalin, follow [github account](https://github.com/dmulyalin) and [twitter feed](https://twitter.com/DMulyalin) for latest updates._
+
+---
+
 # SALTSTACK Nornir Proxy Minion introduction
 
-Network Automation is a complex but interesting topic with a lot of problems to solve and a lot to learn, defined by one of the [vendors](https://www.cisco.com/c/en/us/solutions/automation/network-automation.html) as:
+Network Automation is a complex but interesting topic with a lot of challenges to explore and a lot to learn, defined by one of the [vendors](https://www.cisco.com/c/en/us/solutions/automation/network-automation.html) as:
 
 > Network automation is the process of automating the configuring, managing, testing, deploying, and operating of physical and virtual devices within a network.
 
-This post is an introduction in what SALTSTACK is and what is Nornir and how Network Automation field can benefit from combining them together.
+This post is an introduction to SALTSTACK and Nornir and how the Network Automation field can benefit from combining them.
 
 ## Nornir ~~or~~ and SALTSTACK
 
-Many systems were developed to address automation aspects of networking, Nornir and SALTSTACK falls in same category and could be briefly introduced as:
+Many systems were developed to address automation aspects of networking, Nornir and SALTSTACK fall in the same category and could be succinctly described as:
 
-**Nornir** - *is an automation framework written in python to be used with python* - it is a general purpose, automation system that uses plugins to address specific problems at specific layers.
+**Nornir** - *is an automation framework written in python to be used with python* - it is a general purpose automation system that uses plugins to address specific problems at specific layers.
 
-**SALTSTACK** - *Built on python, Salt uses simple and human-readable YAML combined with event-driven automation to deploy and configure complex IT systems* - it is a general purpose, hierarchical, automation system that uses modules to address specific problems at specific levels.
+**SALTSTACK** - *Built on python, Salt uses simple and human-readable YAML combined with event-driven automation to deploy and configure complex IT systems* - it is a general purpose and hierarchical automation system that uses modules to address specific problems at specific levels.
 
 Both systems share many common aspects, such as:
 
@@ -21,13 +31,13 @@ Both systems share many common aspects, such as:
 - Both are open-source (SALTSTACK community) and available on GitHub
 - Both follow *"everything is pluggable and extendable"* paradigm
 
-But, while Nornir targets mainly automation of netowrks, SALTSTACK was initially developed to automate IT systems - servers, virtual machines, operating systems, applications.
+But, while Nornir targets mainly automation of networks, SALTSTACK was initially developed to automate IT systems - servers, virtual machines, operating systems, applications.
 
-SALT also aims to address a much wider set of use cases compared to Nornir, it has more components, longer history (111,991 commits) and big community. Moreover, SALTSTACK has a command of developers backing it up and was recently [purchased](https://blogs.vmware.com/management/2020/10/vmware-completes-saltstack-acquisition-to-bolster-software-configuration-management-and-infrastructure-automation.html) by VMWare. Worth noting that SALTSTACK has Enterprise version as well.
+SALT also aims to address a much wider set of use cases compared to Nornir, it has more components, longer history (111,991 commits) and big community. Moreover, SALTSTACK has a Team of developers backing it up and was recently [purchased](https://blogs.vmware.com/management/2020/10/vmware-completes-saltstack-acquisition-to-bolster-software-configuration-management-and-infrastructure-automation.html) by VMWare. Worth noting that SALTSTACK has an Enterprise version as well.
 
 ## Nornir intro
 
-Nornir is a Python based framework or package if you'd like. That package contains pluggable core that uses plugins to do it's work.
+Nornir is a Python based framework or package if you'd like. That package contains pluggable core that uses plugins to do its work.
 
 Diagram to recap key Nornir components:
 ```
@@ -95,27 +105,29 @@ Key aspects of SALT architecture could be summarized as below:
 ```
 SALT Master is the HUB of the overall system, it communicates with Minions to execute various tasks. SALTSTACK uses [modules](https://docs.saltproject.io/en/latest/ref/index.html) to address various use cases.
 
-In the simplest (master-less) case, no Master required and only Minion process need to run on the system. But (probably) most common deployment is a two tier hierarchy where Master controls (many) Minions. Each Minion acts as an agent natively running on the Operating System of the system being managed. 
+In the simplest master-less case no Master is required and only a Minion process need to run. Most common deployment, however, is a two tier hierarchy system where Master controls many Minions. Each Minion acts as an agent natively running on the Operating System of the server or device being managed. 
 
-Two-tier approach works well while you need to manage devices that can run Python and other packages required by Minion. But it falls short when you need to manage systems that does not provide such capabilities and instead could be managed over API (HTTP, Netconf etc.) or SSH/Telnet.
+The two-tier approach works well while you need to manage devices that can run Python and other packages required by Minion. But it falls short when you need to manage systems that do not provide such capabilities and instead could be managed over API (HTTP, Netconf etc.) or SSH/Telnet.
 
-Three-tier hierarchy was developed to accommodate for systems that cannot run Minion processes. For that case, special minion process need to run somewhere where it is reachable by Master and able to talk with managed device - this type of minion called proxy-minion. 
+A three-tier hierarchy was developed to accommodate systems that cannot run Minion processes. For that case, special minion process need to run somewhere where it is reachable by the Master and able to talk with the managed device - this type of minion is called proxy-minion. 
+
+For completeness it is good to mention that [SALT Syndic](https://docs.saltproject.io/en/latest/topics/topology/syndic.html) architecture also exists, that architecture allows to introduce Master of Masters node for big scale deployments. For redundancy purposes several Masters can be deployed in an active-standby manner.
 
 Proxy Minions and Normal minions use execution modules to provide SALT Master and ultimately end-user with functionality to manage target systems/devices. For example, latest (at the time) version of SALT 3003.1 shipped with 529 execution modules each containing several functions. Many execution modules can be used by proxy-minions.
 
 ## SALTSTACK how to use it
 
-For Human beings, preferred way of interacting with SALT is a collection of CLI utilities that you invoke on Master, main ones being `salt` and `salt-run`.
+The preferred way of interacting manually with SALT is a collection of CLI utilities that you invoke on Master, main ones are `salt` and `salt-run`.
 
-For machines/scripts SALT exposes native [Python API](https://docs.saltproject.io/en/latest/ref/clients/index.html#client-apis) same as Nornir. In addition to that, SALT can run REST API server, which acts as a thin wrapper around Python API.
+For machines/scripts SALT exposes a native [Python API](https://docs.saltproject.io/en/latest/ref/clients/index.html#client-apis) same as Nornir. In addition to that, SALT can run REST API server, which acts as a thin wrapper around Python API.
 
-Here is an example of running "clock" shell command on the remote Linux machine called *srv-1* through the minion using `salt` utility on SALT Master:
+Here is an example of running `clock` shell command on the remote Linux machine called *srv-1* through the minion using `salt` utility on SALT Master:
 
 ```
 salt srv-1 cmd.run 'clock'
 ```
 
-Or, example of running "show clock" command from SALT-Master on the remote network router called *router-1* managed over SSH by NAPALM Proxy Minion:
+Or, example of running `show clock` command from SALT-Master on the remote network router called *router-1* managed over SSH by NAPALM Proxy Minion:
 
 ```
 salt router-1 net.cli "show clock"
@@ -131,9 +143,9 @@ client = salt.client.LocalClient()
 response = client.cmd(tgt="router-1", fun="net.cli", arg=["show clock"])
 ```
 
-Another option to run SALT commands from CLI terminal on local machine could be [Pepper Library](https://github.com/saltstack/pepper), which leverages SALT REST API server.
+Another option to run SALT commands from the CLI on your local machine could be [Pepper Library](https://github.com/saltstack/pepper), which leverages SALT REST API server.
 
-Worth noting that various SALTSTACK web GUI application were developed as well.
+Worth noting that various SALTSTACK web GUI applications were developed as well.
 
 ## How Nornir fits the picture
 
@@ -143,11 +155,11 @@ However, the main drawback of proxy-minion for network automation, or better say
 
 If you have somewhat small network of say 50-100 devices (routers, switches, firewalls etc.) you might end up running 50-100 proxy minion processes (one for each managed devices) consuming about 4-10Gbyte of RAM combined. 
 
-If your network is of the bigger size and has about 500-1000 devices in it, you might need 40-100Gbyte of RAM to run your proxy-minions.
+If your network is of a bigger size and has about 500-1000 devices in it, you might need 40-100Gbyte of RAM to run your proxy-minions.
 
-Moving on to Service Provider or big Enterprise - network can grow up to several thousands of devices easily. In that case, resources to run proxy-minions would become substantial.
+For a service provider or big enterprise with thousands of devices, the resources needed for the proxy-minions can be significant.
 
-To address above scaling problem we can improve three-tier hierarchy by making single proxy-minion process to manage several devices using Nornir:
+To address this scaling problem we can improve three-tier hierarchy by making single proxy-minion process to manage several devices using Nornir:
 
 ```
                     +------------------------------+               
@@ -185,7 +197,7 @@ If we opt for 50 devices per Nornir proxy-minion, resources will decrease by a f
 
 In addition to addressing scaling problem SALTSTACK and Nornir can deeply complement one another. 
 
-For instance, single proxy-minion process can use several Nornir connection plugins to communicate with devices and switching between Netmiko, Scrapli or NAPALM to push config to device would become a matter of specifying single command line argument:
+For instance, a single proxy-minion process can use several Nornir connection plugins to communicate with devices and switching between Netmiko, Scrapli or NAPALM to push configuration to devices would become a matter of specifying single command line argument:
 
 ```
 salt nornir-proxy-1 nr.cfg "loopback 1000" "description 'Configured by SALT and Nornir'" plugin=netmiko
@@ -225,5 +237,5 @@ Thank you for reading, hope you enjoyed it. Author would like to leave reader wi
 - Nornir Proxy Minion [documentation](https://salt-nornir.readthedocs.io/en/latest/index.html) 
 - SALTSTACK [website](https://saltproject.io/)
 - SALTSTACK Network Automation [article](https://docs.saltproject.io/en/latest/topics/network_automation/index.html)
-- Mircea Ulinic [blog](https://mirceaulinic.net/) with SALT Network Automation articles 
-- Network Automation at scale [presentation](https://ripe74.ripe.net/presentations/18-RIPE-74-Network-automation-at-scale-up-and-running-in-60-minutes.pdf)
+- Remarkable Mircea Ulinic [blog](https://mirceaulinic.net/) with SALT Network Automation articles 
+- Informative "Network Automation at scale" [presentation](https://ripe74.ripe.net/presentations/18-RIPE-74-Network-automation-at-scale-up-and-running-in-60-minutes.pdf)

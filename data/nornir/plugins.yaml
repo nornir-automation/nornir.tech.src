@@ -169,3 +169,11 @@ repositories:
         - connection
       description: |
           Collection of tasks and connection plugin using the [ncclient](https://github.com/ncclient/ncclient) library to interact with devices over NETCONF.
+
+    - url: https://github.com/viktorkertesz/nornir_sql
+      name: nornir-sql
+      maintainer: "[viktorkertesz](https://github.com/viktorkertesz)"
+      plugin_types:
+        - inventory
+      description: |
+          Use SQL database as source of inventory

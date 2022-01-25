@@ -177,3 +177,11 @@ repositories:
         - inventory
       description: |
           Use SQL database as source of inventory
+          
+    - url: https://github.com/matman26/nornir_csv
+      name: nornir_csv
+      maintainer: "[matman26](https://github.com/matman26)"
+      plugin_types:
+        - inventory
+      description: |
+          Dynamic CSV Inventory plugin with support for Groups, Defaults and Connection Options.

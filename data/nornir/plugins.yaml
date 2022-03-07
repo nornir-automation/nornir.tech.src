@@ -185,3 +185,12 @@ repositories:
         - inventory
       description: |
           Dynamic CSV Inventory plugin with support for Groups, Defaults and Connection Options.
+
+    - url: https://github.com/InfrastructureAsCode-ch/nornir_rich
+      name: nornir-rich
+      maintainer: "[ubaumann](https://github.com/ubaumann)"
+      plugin_types:
+        - functions
+        - processors
+      description: |
+          Collection of functions and processors for generating nice looking output with [rich](https://github.com/Textualize/rich)

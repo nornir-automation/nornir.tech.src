@@ -194,3 +194,11 @@ repositories:
         - processors
       description: |
           Collection of functions and processors for generating nice looking output with [rich](https://github.com/Textualize/rich)
+    
+    - url: https://github.com/shamalawy/nornir-librenms
+      name: nornir_ansible
+      maintainer: "[carlmontanari](https://github.com/shamalawy)"
+      plugin_types:
+      - inventory
+      description: |
+          Use LibreNMS as source of inventory to generate hosts, groups and many attriutes like version, model etc.

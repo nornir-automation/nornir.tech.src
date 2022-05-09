@@ -196,7 +196,7 @@ repositories:
           Collection of functions and processors for generating nice looking output with [rich](https://github.com/Textualize/rich)
     
     - url: https://github.com/shamalawy/nornir-librenms
-      name: nornir_ansible
+      name: nornir_librenms
       maintainer: "[carlmontanari](https://github.com/shamalawy)"
       plugin_types:
       - inventory

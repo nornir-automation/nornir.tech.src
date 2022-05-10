@@ -197,7 +197,7 @@ repositories:
     
     - url: https://github.com/shamalawy/nornir-librenms
       name: nornir_librenms
-      maintainer: "[carlmontanari](https://github.com/shamalawy)"
+      maintainer: "[shamalawy](https://github.com/shamalawy)"
       plugin_types:
       - inventory
       description: |

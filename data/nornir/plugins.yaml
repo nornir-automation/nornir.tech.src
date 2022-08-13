@@ -202,3 +202,13 @@ repositories:
       - inventory
       description: |
           Use LibreNMS as source of inventory to generate hosts, groups and many attriutes like version, model etc.
+
+    - url: https://github.com/networktocode/nornir-pyntc
+      name: nornir_pyntc
+      maintainer: "[Network to Code](https://github.com/networktocode)"
+      plugin_types:
+        - tasks
+        - connection
+      description: |
+          Collection of tasks and connection plugin using the [pyntc](https://github.com/networktocode/pyntc) library to interact with devices.
+

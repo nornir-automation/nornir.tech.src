@@ -212,3 +212,12 @@ repositories:
       description: |
           Collection of tasks and connection plugin using the [pyntc](https://github.com/networktocode/pyntc) library to interact with devices.
 
+    - url: https://github.com/akarneliuk/nornir_pygnmi
+      name: nornir_pygnmi
+      maintainer: "[akarneliuk](https://github.com/akarneliuk)"
+      plugin_types:
+        - tasks
+        - connection
+      description: |
+          Collection of tasks and connection plugin using the [pygnmi](https://github.com/akarneliuk/pygnmi), the gNMI Python library
+

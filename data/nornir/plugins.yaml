@@ -221,3 +221,12 @@ repositories:
       description: |
           Collection of tasks and connection plugin using the [pygnmi](https://github.com/akarneliuk/pygnmi), the gNMI Python library
 
+    - url: https://github.com/gt732/nornir_pyfgt
+      name: nornir_pyfgt
+      maintainer: "[gt732](https://github.com/gt732)"
+      plugin_types:
+        - tasks
+        - connection
+      description: |
+          Collection of tasks and connection plugin using the [fortigate-api](https://github.com/vladimirs-git/fortigate-api) library to interact with fortigate firewall devices.
+

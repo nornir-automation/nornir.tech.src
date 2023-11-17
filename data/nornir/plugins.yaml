@@ -64,6 +64,14 @@ repositories:
       description: |
           Collection of tasks to work with jinja2 templates
 
+    - url: https://gitlab.com/ip-fabric/integrations/ipfabric_nornir
+      name: ipfabric_nornir
+      maintainer: "[IP Fabric](https://gitlab.com/ip-fabric/integrations)"
+      plugin_types:
+      - inventory
+      description: |
+           IP Fabric vendor supported Nornir inventory plugin forked from [nornir_ipfabric](https://github.com/routetonull/nornir_ipfabric)
+    
     - url: https://github.com/routetonull/nornir_ipfabric
       name: nornir_ipfabric
       maintainer: "[routetonull](https://github.com/routetonull)"

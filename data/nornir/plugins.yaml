@@ -238,3 +238,11 @@ repositories:
       description: |
           Collection of tasks and connection plugin using the [fortigate-api](https://github.com/vladimirs-git/fortigate-api) library to interact with fortigate firewall devices.
 
+    - url: https://github.com/opsmill/nornir-infrahub
+      name: nornir_infrahub
+      maintainer: "[wvandeun](https://github.com/wvandeun)"
+      plugin_types:
+      - inventory
+      description: |
+          Nornir inventory plugin for [Infrahub](https://github.com/opsmill/infrahub)
+

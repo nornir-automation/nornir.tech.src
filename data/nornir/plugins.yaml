@@ -243,6 +243,7 @@ repositories:
       maintainer: "[wvandeun](https://github.com/wvandeun)"
       plugin_types:
       - inventory
+      - tasks
       description: |
           Nornir inventory plugin for [Infrahub](https://github.com/opsmill/infrahub)
 

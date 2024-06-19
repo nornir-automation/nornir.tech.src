@@ -240,10 +240,9 @@ repositories:
 
     - url: https://github.com/opsmill/nornir-infrahub
       name: nornir_infrahub
-      maintainer: "[wvandeun](https://github.com/wvandeun)"
+      maintainer: "[OpsMill](https://github.com/opsmill/)"
       plugin_types:
       - inventory
       - tasks
       description: |
-          Nornir inventory plugin for [Infrahub](https://github.com/opsmill/infrahub)
-
+          Nornir plugin for [Infrahub](https://github.com/opsmill/infrahub)

@@ -246,3 +246,11 @@ repositories:
       - tasks
       description: |
           Nornir plugin for [Infrahub](https://github.com/opsmill/infrahub)
+
+    - url: https://github.com/network-unit-testing-system/nornir_nuts
+      name: nornir-nuts
+      maintainer: "[nuts](https://github.com/network-unit-testing-system)"
+      plugin_types:
+        - runners
+      description: |
+          Nornir plugins designed for use with Nuts; `CachedThreaded Runner`

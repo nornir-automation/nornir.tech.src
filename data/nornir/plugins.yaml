@@ -254,3 +254,11 @@ repositories:
         - runners
       description: |
           Nornir plugins designed for use with Nuts; `CachedThreaded Runner`
+
+    - url: https://github.com/InfrastructureAsCode-ch/nornir_conditional_runner
+      name: nornir-conditional-runner
+      maintainer: "[slinder](https://github.com/SimLi1333)"
+      plugin_types:
+        - runners
+      description: |
+          Nornir plugin `ConditionalRunner` that enforces concurrency limits based on host groups or custom condition groups.
